@@ -58,20 +58,24 @@ button {
 }
 
 #invitation {
-  position: relative; /* 定位基準 */
-  width: 540px;
-  height: 960px;
+  position: relative;
+  /* 刪除固定寬高，改用響應式設定 */
+  width: 100%; 
+  max-width: 540px; /* 在大螢幕上最大只到 540px */
+  margin: 0 auto;   /* 置中 */
+  aspect-ratio: 9 / 16; /* 鎖定比例，這能自動算出高度 */
 }
 
 /* 影片設定 */
 .alpha-video {
   position: absolute;
   top: 50%;
-  width: 540px;          /* 可以依設計稿縮放 */
-  height: 960px;
-  transform: translate(-30%, -50%);
-  object-fit: contain;      /* 或 cover，避免變形 */
+  left: 50%; /* 配合 translate 做水平置中 */
+  width: 100%;      /* 寬度隨容器縮放 */
+  height: 100%;     /* 高度隨容器縮放 */
+  transform: translate(-50%, -50%); /* 修正：將影片精確置中 */
+  object-fit: contain;
   z-index: 1;
-
 }
+
 
