@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+}
+
+body {
+  background: #9F3221;
+  color: #9F3221;
+  height: 100vh;
+
+}
+
+.page {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.05);
+}
+
+.logo {
+  width: 350px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 14px 32px;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+
+.store {
+  margin-top: 12px;
+  letter-spacing: 0.2em;
+}
+
+.info {
+  margin: 40px 0;
+  line-height: 1.8;
+}
+
+#invitation {
+  position: relative; /* 定位基準 */
+  width: 540px;
+  height: 960px;
+}
+
+/* 影片設定 */
+.alpha-video {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 540px;          /* 可以依設計稿縮放 */
+  height: 960px;
+  transform: translate(-30%, -50%);
+  object-fit: contain;      /* 或 cover，避免變形 */
+  z-index: 1;
+}
